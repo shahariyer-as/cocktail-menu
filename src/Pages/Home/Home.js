@@ -1,17 +1,32 @@
 import React, { useEffect, useState } from 'react';
 
 const Home = () => {
-    const [products,setProduct]= useState({});
-    console.log(products)
+    const [searchText, setSearchText]= useState("")
+    const [products,setProduct]= useState([]);
+    // console.log("Home ~ searchText", searchText)
+
 
     useEffect(()=>{
-fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a`)
-.then(res=>res.json())
-.then(data=>setProduct(data.drinks[0]))
-    },[])
+        const url=`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchText}`
+        fetch(url)
+        .then(res=>res.json())
+        .then(data=>setProduct(data.drinks))
+            },[searchText]);
+
+    console.log(products)
+const handleSearchField=e =>{
+    const searchTextValue=e.target.value;
+    setSearchText(searchTextValue);   
+}
+
     return (
         <div>
-            <h2>total: {products.idDrink}</h2>
+<div> Cocktail Menu</div>
+
+<div>
+    <input onChange={handleSearchField} placeholder="search" type="text"/>
+</div>
+            <h2>total: {products.length}</h2>
             <img src={products.strDrinkThumb} alt="" width={200}/>
 
         </div>
