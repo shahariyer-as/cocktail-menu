@@ -31,7 +31,7 @@ const SearchProducts = () => {
       </div>
       </div>
       <div>
-      <div className="mt-2 row row-cols-1 row-cols-md-4 g-3">
+      <div className="mt-2 row row-cols-1 row-cols-md-4 row-cols-sm-2  g-3">
         {products?.map((product) => (
           <Product product={product} key={product.idDrink} />
         ))}

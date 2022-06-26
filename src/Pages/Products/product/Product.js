@@ -8,7 +8,7 @@ const product = (props) => {
         <div>
       
   <div className="col container m-2 ">
-    <div className="card h-100">
+    <div className="card h-100 card-design">
       <img src={strDrinkThumb} className="card-img-top p-2"  alt="..."/>
       <div className="card-body">
         <h5 className="card-title">{strDrink}</h5>
