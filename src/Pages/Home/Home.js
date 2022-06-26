@@ -1,5 +1,5 @@
 
-import { NavLink } from "react-router-dom";
+import NavBar from "../NavBar/NavBar";
 import SearchProducts from "../Products/SearchProducts/SearchProducts";
 
 import "./Home.css";
@@ -7,16 +7,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
-      {/*-------- nav bar --------- */}
-      <nav>
-        <ul className="nav">
-          <li> <NavLink className="nav-link" to="/home">Home</NavLink></li>
-          <li> <NavLink className="nav-link" to="/home">Product</NavLink></li>
-          <li> <NavLink className="nav-link" to="/home">About</NavLink></li>
-          
-        </ul>
-      </nav>
-
+<NavBar></NavBar>
 {/* search cocktail  */}
       <SearchProducts></SearchProducts>
 
