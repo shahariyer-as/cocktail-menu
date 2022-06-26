@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Products from "../Products";
-
+import Product from "../product/Product";
 const SearchProducts = () => {
   const [searchText, setSearchText] = useState("");
   const [products, setProduct] = useState([]);
@@ -17,21 +16,23 @@ const SearchProducts = () => {
   const handleSearchField = (e) => {
     const searchTextValue = e.target.value;
     setSearchText(searchTextValue);
-
-    e.preventDefault("");
   };
 
   return (
     <div>
-      <div> Cocktail Menu</div>
       {/* --------search button -------- */}
 
-      <div>
-        <input className="px-5 rounded" onChange={handleSearchField} placeholder="Search your cocktail ...." type="text" />
+      <div className="search-banner d-flex mx-5" >
+        <div >
+        <h1 className="header-option"> Search your cocktail menu</h1>
+        </div>
+      <div className="px-5">
+        <input className="px-5 rounded" onChange={handleSearchField} placeholder="Search ...." type="text" />
+      </div>
       </div>
       <div>
         {products?.map((product) => (
-          <Products product={product} key={product.idDrink} />
+          <Product product={product} key={product.idDrink} />
         ))}
       </div>
     </div>

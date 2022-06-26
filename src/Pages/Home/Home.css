@@ -1,0 +1,41 @@
+
+.nav li{
+padding: 15px;
+}
+.nav{
+    color: black;
+   justify-content: end;
+}
+.header-option{
+    color: #aa1616;
+    margin-top: -11px;
+}
+.nav-link{
+font-size: 20px;
+color: #aa1616;
+/* cursor: pointer; */
+}
+.nav-link:hover{
+font-size: 1em;
+border: 1px solid red;
+border-radius: 10px;
+}
+
+input[type=text] {
+    margin-left: 60px;
+    width: 150px;
+    box-sizing: border-box;
+    border: 2px solid #aa1616;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 6px 25px 6px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
